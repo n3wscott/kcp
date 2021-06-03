@@ -1,0 +1,51 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: ketcd
+spec:
+  template:
+    metadata:
+      annotations:
+        autoscaling.knative.dev/maxScale: "1"
+        autoscaling.knative.dev/minScale: "1"
+    spec:
+      containers:
+        - image: ko://github.com/kcp-dev/kcp/cmd/ketcd
+          volumeMounts:
+            - name: ca
+              mountPath: "/.kcp/data/secrets/ca"
+            - name: client
+              mountPath: "/.kcp/data/secrets/client"
+            - name: peer
+              mountPath: "/.kcp/data/secrets/peer"
+      volumes:
+        - name: ca
+          secret:
+            secretName: kcp-ca
+            items:
+              - key: tls.crt
+                path: cert.pem
+                mode: 0777
+              - key: tls.key
+                path: key.pem
+                mode: 0777
+        - name: client
+          secret:
+            secretName: kcp-client
+            items:
+              - key: tls.crt
+                path: cert.pem
+                mode: 0777
+              - key: tls.key
+                path: key.pem
+                mode: 0777
+        - name: peer
+          secret:
+            secretName: kcp-ca
+            items:
+              - key: tls.crt
+                path: cert.pem
+                mode: 0777
+              - key: tls.key
+                path: key.pem
+                mode: 0777

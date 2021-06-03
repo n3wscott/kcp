@@ -408,6 +408,8 @@ github.com/kcp-dev/kubernetes/staging/src/k8s.io/kubelet v0.0.0-20210504234152-9
 github.com/kcp-dev/kubernetes/staging/src/k8s.io/legacy-cloud-providers v0.0.0-20210504234152-98ac86830031/go.mod h1:R6lK1g14jiec20OVuA1ArvsCKs5th4rxGL3eUMdQmyA=
 github.com/kcp-dev/kubernetes/staging/src/k8s.io/metrics v0.0.0-20210504234152-98ac86830031/go.mod h1:xZM9EdJpWjqIWPvLiCP7vYKUEMwIgc0S8nc/MlLVK3Y=
 github.com/kcp-dev/kubernetes/staging/src/k8s.io/sample-apiserver v0.0.0-20210504234152-98ac86830031/go.mod h1:p8OmVbdzpawdZ/r9E1qcdJpzRirEg4OcSg8aZVWqvJo=
+github.com/kelseyhightower/envconfig v1.4.0 h1:Im6hONhd3pLkfDFsbRgu68RDNkGF1r3dvMUtDTo2cv8=
+github.com/kelseyhightower/envconfig v1.4.0/go.mod h1:cccZRl6mQpaq41TPp5QxidR+Sa3axMbJDNb//FQX6Gg=
 github.com/kisielk/errcheck v1.1.0/go.mod h1:EZBBE59ingxPouuu3KfxchcWSUPOHkagtvWXihfKN4Q=
 github.com/kisielk/errcheck v1.2.0/go.mod h1:/BMXB+zMLi60iA8Vv6Ksmxu/1UDYcXs4uQLJ+jE2L00=
 github.com/kisielk/gotool v0.0.0-20161130080628-0de1eaf82fa3/go.mod h1:jxZFDH7ILpTPQTk+E2s+z4CUas9lVNjIuKR4c5/zKgM=
